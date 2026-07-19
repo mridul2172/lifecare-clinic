@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+
+.scrollBtn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $color-sky, #0284c7);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: $shadow-lift;
+  z-index: 90;
+}

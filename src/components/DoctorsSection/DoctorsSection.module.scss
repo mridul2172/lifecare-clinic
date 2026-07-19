@@ -1,0 +1,129 @@
+@use '../../styles/variables' as *;
+
+.doctors {
+  padding: 90px 0;
+  background: $color-sky-pale;
+}
+
+.sectionHead {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: $color-navy;
+  }
+
+  p {
+    color: $color-ink-muted;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: $radius-pill;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-sky;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: $radius-base;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: $shadow-soft;
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: $shadow-lift;
+  }
+
+  h3 {
+    font-size: 17px;
+    color: $color-navy;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-size: 13px;
+    color: $color-ink-muted;
+    margin-bottom: 18px;
+  }
+}
+
+.avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, $color-sky, #0284c7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 22px;
+  box-shadow: $shadow-lift;
+}
+
+.specialty {
+  display: block;
+  font-size: 13.5px;
+  color: $color-sky;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.viewProfile {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-navy;
+  border: 1.5px solid rgba(15, 23, 42, 0.12);
+  padding: 8px 20px;
+  border-radius: $radius-sm;
+  transition: border-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    border-color: $color-sky;
+    color: $color-sky;
+  }
+}
+
+@media (max-width: $bp-laptop) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

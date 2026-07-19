@@ -1,0 +1,120 @@
+@use '../../styles/variables' as *;
+
+.testimonials {
+  padding: 90px 0;
+  background: $color-sky-pale;
+}
+
+.sectionHead {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: $color-navy;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $color-ink-muted;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: $radius-pill;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-sky;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: $radius-base;
+  padding: 32px 28px;
+  box-shadow: $shadow-soft;
+  transition: box-shadow 0.25s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: $shadow-lift;
+  }
+}
+
+.quoteIcon {
+  color: $color-sky-pale;
+  margin-bottom: 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.quoteText {
+  font-size: 14.5px;
+  color: $color-navy-soft;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  b {
+    display: block;
+    font-size: 14px;
+    color: $color-navy;
+  }
+
+  span {
+    font-size: 12.5px;
+    color: $color-ink-muted;
+  }
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $color-sky, #0284c7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+@media (max-width: $bp-laptop) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

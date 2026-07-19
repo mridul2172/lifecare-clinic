@@ -1,0 +1,114 @@
+@use '../../styles/variables' as *;
+
+.mapSection {
+  padding: 90px 0;
+  background: $color-sky-pale;
+}
+
+.sectionHead {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    color: $color-navy;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $color-ink-muted;
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: $radius-pill;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-sky;
+}
+
+.mapWrap {
+  position: relative;
+  border-radius: $radius-base;
+  overflow: hidden;
+  box-shadow: $shadow-soft;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 420px;
+}
+
+.infoCard {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: $radius-base;
+  padding: 22px;
+  width: 280px;
+  box-shadow: $shadow-soft;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  svg {
+    color: $color-sky;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  b {
+    display: block;
+    font-size: 13.5px;
+    color: $color-navy;
+    margin-bottom: 3px;
+  }
+
+  span {
+    font-size: 12.5px;
+    color: $color-ink-muted;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: $bp-tablet) {
+  .infoCard {
+    position: static;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: $radius-base;
+  }
+
+  .mapFrame {
+    height: 300px;
+  }
+}

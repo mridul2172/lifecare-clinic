@@ -1,0 +1,162 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: $color-navy;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 64px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about {
+  p {
+    margin: 18px 0 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 300px;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-heading;
+  font-weight: 800;
+  font-size: 19px;
+  color: #fff;
+}
+
+.brandAccent {
+  color: $color-sky;
+}
+
+.brandMark {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, $color-sky, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+
+  a {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+      background: $color-sky;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.linksCol {
+  h4 {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  ul li {
+    margin-bottom: 12px;
+  }
+
+  a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.65);
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: $color-sky-light;
+    }
+  }
+}
+
+.contactCol {
+  h4 {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 16px;
+    font-size: 13.5px;
+    line-height: 1.6;
+
+    svg {
+      flex-shrink: 0;
+      color: $color-sky-light;
+      margin-top: 2px;
+    }
+  }
+}
+
+.bottomBar {
+  padding: 22px 0;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.35);
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: $bp-laptop) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
